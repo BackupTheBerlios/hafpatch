@@ -26,13 +26,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ComCtrls, ExtCtrls;
+  Dialogs, ComCtrls, ExtCtrls, StdCtrls, XPMan;
 
 type
   TMain = class(TForm)
-    PageControl1: TPageControl;
-    tabWelcome: TTabSheet;
-    Panel1: TPanel;
+    nbNotebook: TNotebook;
+    paNavigation: TPanel;
+    Bevel1: TBevel;
+    paInfo: TPanel;
+    btnBack: TButton;
+    btnForward: TButton;
+    btnCancel: TButton;
+    laInfoHeadline: TLabel;
+    laInfoText: TLabel;
+    imgIcon: TImage;
+    Bevel2: TBevel;
     procedure FormCreate(Sender: TObject);
   private
     { Private-Deklarationen }
@@ -43,15 +51,31 @@ type
 var
   Main: TMain;
 
+resourcestring
+  AppVerName = 'Hafpatch 0.1';
+
+
 implementation
+
+uses uLanguages;
 
 {$R *.dfm}
 
 procedure TMain.FormCreate(Sender: TObject);
 begin
   // Initialization
+  LangId := GetSystemDefaultLangID;
   If Screen.Fonts.IndexOf('Tahoma') <> (-1) then Font.Name := 'Tahoma';
+  laInfoHeadline.Font.Style := [fsBold];
+  Main.Caption := AppVerName;
 
+  // Translate Initial Buttons
+  btnBack.Caption := TranslateStr(101);
+  btnForward.Caption := TranslateStr(102);
+  btnCancel.Caption := TranslateStr(103);
+
+  laInfoHeadline.Caption := TranslateStr(200);
+  laInfoText.Caption := TranslateStr(210);
 end;
 
 end.

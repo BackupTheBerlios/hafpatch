@@ -25,7 +25,8 @@ program Hafpatch;
 
 uses
   Forms,
-  uMain in 'uMain.pas' {Main};
+  uMain in 'uMain.pas' {Main},
+  uLanguages in 'uLanguages.pas';
 
 {$R *.res}
 
