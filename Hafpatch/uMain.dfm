@@ -1,6 +1,6 @@
 object Main: TMain
-  Left = 449
-  Top = 278
+  Left = 326
+  Top = 146
   Width = 503
   Height = 385
   BorderIcons = [biSystemMenu, biMinimize]
@@ -13,6 +13,7 @@ object Main: TMain
   Font.Style = []
   OldCreateOrder = False
   Position = poDefaultPosOnly
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -26,7 +27,32 @@ object Main: TMain
     object TPage
       Left = 0
       Top = 0
-      Caption = 'Vorgabe'
+      Caption = 'ChooseKind'
+      object laChooseKindQuestion: TLabel
+        Left = 20
+        Top = 24
+        Width = 107
+        Height = 13
+        Caption = 'laChooseKindQuestion'
+      end
+      object rbChooseKindSetup: TRadioButton
+        Left = 20
+        Top = 50
+        Width = 453
+        Height = 17
+        Caption = 'rbChooseKindSetup'
+        Checked = True
+        TabOrder = 0
+        TabStop = True
+      end
+      object rbChooseKindInstalled: TRadioButton
+        Left = 20
+        Top = 72
+        Width = 453
+        Height = 17
+        Caption = 'rbChooseKindInstalled'
+        TabOrder = 1
+      end
     end
   end
   object paNavigation: TPanel
@@ -69,6 +95,7 @@ object Main: TMain
       Height = 23
       Caption = 'btnCancel'
       TabOrder = 2
+      OnClick = btnCancelClick
     end
   end
   object paInfo: TPanel

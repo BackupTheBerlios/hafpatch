@@ -55,7 +55,13 @@ begin
 
               // Top bar
               200: Result := 'Welcome to hafpatch';
-              210: Result := 'Blaaa';
+              201: Result := 'The wizard needs to know which kind of version '+
+                             'you want to change';
+
+              // Page 0: Choose Kind
+              1000: Result := 'Which kind of HAFAS do you want to change?';
+              1001: Result := 'Change a Setup (e.g. from a HAFAS CD)';
+              1002: Result := 'Change an already installed version of HAFAS';
 
               // In case of error use default message
               else Result := 'No translation resource found';
@@ -71,7 +77,13 @@ begin
 
               // Top bar
               200: Result := 'Willkommen bei hafpatch';
-              210: Result := 'Blaaa';
+              201: Result := 'Der Assistent benötigt Informationen, welche Art'+
+                             ' der Installation geändert werden soll.';
+
+              // Page 0: Choose Kind
+              1000: Result := 'Welchen Typ von Hafas möchten Sie ändern?';
+              1001: Result := 'Setup-Version ändern (z.B. von einer CD)';
+              1002: Result := 'Bereits installierte HAFAS-Version ändern';
 
               // In case of error use english language
               else Result := GetLangStr(StringId, 1033);

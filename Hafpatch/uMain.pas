@@ -41,7 +41,13 @@ type
     laInfoText: TLabel;
     imgIcon: TImage;
     Bevel2: TBevel;
+    rbChooseKindSetup: TRadioButton;
+    laChooseKindQuestion: TLabel;
+    rbChooseKindInstalled: TRadioButton;
     procedure FormCreate(Sender: TObject);
+    procedure btnCancelClick(Sender: TObject);
+    procedure SwitchToPage(Page: Integer);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
   private
     { Private-Deklarationen }
   public
@@ -74,8 +80,37 @@ begin
   btnForward.Caption := TranslateStr(102);
   btnCancel.Caption := TranslateStr(103);
 
-  laInfoHeadline.Caption := TranslateStr(200);
-  laInfoText.Caption := TranslateStr(210);
+  // Start
+  SwitchToPage(0);
+end;
+
+procedure TMain.btnCancelClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TMain.SwitchToPage(Page: Integer);
+begin
+  Case Page of
+  0: begin
+       laInfoHeadline.Caption := TranslateStr(200);
+       laInfoText.Caption := TranslateStr(201);
+       laChooseKindQuestion.Caption := TranslateStr(1000);
+       rbChooseKindSetup.Caption := TranslateStr(1001);
+       rbChooseKindInstalled.Caption := TranslateStr(1002);
+     end;
+  end;
+  nbNotebook.PageIndex := Page;
+
+
+
+end;
+
+procedure TMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin
+  // Clear Environment
+
+
 end;
 
 end.
