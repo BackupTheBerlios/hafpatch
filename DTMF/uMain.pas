@@ -41,6 +41,7 @@ type
     procedure SpeedButton8Click(Sender: TObject);
     procedure SpeedButton12Click(Sender: TObject);
     procedure SpeedButton16Click(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
   private
     Channel: DWord;
     procedure PlayDTMF(Tone: Char);
@@ -196,5 +197,10 @@ begin
 end;
 
 
+
+procedure TMain.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+  PlayDTMF(UpCase(Key));
+end;
 
 end.

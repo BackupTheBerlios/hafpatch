@@ -17,7 +17,7 @@ EditWindowCount=1
 [C:\Coding\Delphi7\Projects\DTMF\uMain.pas]
 ModuleType=SourceModule
 FormState=1
-FormOnTop=1
+FormOnTop=0
 
 [C:\Coding\Delphi7\Projects\DTMF\ProjectGroup1.bpg]
 FormState=0
@@ -47,13 +47,13 @@ LeftPanelSize=0
 RightPanelSize=0
 BottomPanelSize=0
 BottomPanelClients=MessageView@EditWindow0
-BottomPanelData=00000400010000000B0000004D657373616765566965770000000000000000000000000000000000FFFFFFFF
+BottomPanelData=00000400010000000B0000004D6573736167655669657700000000000000000000000000000000000100000000000000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
 Module=C:\Coding\Delphi7\Projects\DTMF\uMain.pas
-CursorX=1
-CursorY=1
-TopLine=1
+CursorX=14
+CursorY=203
+TopLine=189
 LeftCol=1
 
 [Watches]
@@ -124,7 +124,7 @@ LRDockWidth=190
 Dockable=1
 SplitPos=85
 ArrangeBy=Name
-SelectedItem=Caption
+SelectedItem=KeyPreview
 ExpandedItems=
 HiddenCategories=
 
@@ -148,13 +148,13 @@ Dockable=1
 Create=1
 Visible=0
 State=0
-Left=-140
-Top=-906
-Width=443
+Left=12
+Top=0
+Width=848
 Height=85
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=443
+ClientWidth=848
 ClientHeight=85
 TBDockHeight=85
 LRDockWidth=443
