@@ -1,6 +1,6 @@
 object Main: TMain
-  Left = 368
-  Top = 177
+  Left = 470
+  Top = 193
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'DTMF-T'#246'ne'
@@ -13,6 +13,7 @@ object Main: TMain
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13

@@ -161,22 +161,22 @@ var
   S: String;
 begin
   Case Tone of
-    '1': S := '1.wav';
-    '2': S := '2.wav';
-    '3': S := '3.wav';
-    '4': S := '4.wav';
-    '5': S := '5.wav';
-    '6': S := '6.wav';
-    '7': S := '7.wav';
-    '8': S := '8.wav';
-    '9': S := '9.wav';
-    '0': S := '0.wav';
-    '*': S := 'stern.wav';
-    '#': S := 'raute.wav';
-    'A': S := 'a.wav';
-    'B': S := 'b.wav';
-    'C': S := 'c.wav';
-    'D': S := 'd.wav';
+    '1': S := '1.ogg';
+    '2': S := '2.ogg';
+    '3': S := '3.ogg';
+    '4': S := '4.ogg';
+    '5': S := '5.ogg';
+    '6': S := '6.ogg';
+    '7': S := '7.ogg';
+    '8': S := '8.ogg';
+    '9': S := '9.ogg';
+    '0': S := '0.ogg';
+    '*': S := 'stern.ogg';
+    '#': S := 'raute.ogg';
+    'A': S := 'a.ogg';
+    'B': S := 'b.ogg';
+    'C': S := 'c.ogg';
+    'D': S := 'd.ogg';
     else Exit;
   end;
 
